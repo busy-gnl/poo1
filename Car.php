@@ -4,7 +4,7 @@ class Car
 {
     private int $nbWheels = 4;
     private int $currentSpeed;
-    private int $energyLevel;
+    private int $energyLevel = 1;
 
     public function __construct(private string $color, private int $nbSeats, private string $energy)
     {
@@ -32,16 +32,26 @@ class Car
 
     public function start(): string
     {
-        if ($this->currentSpeed = 0) {
-            $this->brake();
-
-            return "Let's take a ride !";
+        // if ($this->currentSpeed = 0) {
+        //     $this->forward();
+        // }
+        if ($this->currentSpeed === 0 && $this->energyLevel > 0) {
+            while ($this->currentSpeed < 15) {
+                $this->currentSpeed += 5;
+            }
         }
+
+        return "<br>Let's take a ride !<br>";
     }
 
     public function getNbWheels(): int
     {
         return $this->nbWheels;
+    }
+
+    public function setCurrentSpeed($currentSpeed): void
+    {
+        $this->currentSpeed = $currentSpeed;
     }
 
     public function getCurrentSpeed(): int
@@ -61,7 +71,7 @@ class Car
 
     public function getEnergy(): string
     {
-        return "This car drinks $this->energy";
+        return "<br>This car drinks $this->energy <br>";
     }
 
     public function getEnergyLevel(): int
