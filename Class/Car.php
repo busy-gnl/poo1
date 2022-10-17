@@ -1,6 +1,6 @@
 <?php
 
-require_once "Vehicle.php";
+namespace Class;
 
 class Car extends Vehicle
 {
@@ -20,9 +20,7 @@ class Car extends Vehicle
 
     public function start(): string
     {
-        // if ($this->currentSpeed = 0) {
-        //     $this->forward();
-        // }
+
         if ($this->currentSpeed === 0 && $this->energyLevel > 0) {
             while ($this->currentSpeed < 15) {
                 $this->currentSpeed += 5;

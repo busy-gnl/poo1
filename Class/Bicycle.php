@@ -1,6 +1,7 @@
 <?php
 
-require_once 'Vehicle.php';
+namespace Class;
+
 
 class Bicycle extends Vehicle
 {

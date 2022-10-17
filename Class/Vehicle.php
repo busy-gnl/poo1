@@ -1,8 +1,8 @@
 <?php
 
-// Vehicle.php
+namespace Class;
 
-class Vehicle
+abstract class Vehicle
 {
 
     protected string $color;

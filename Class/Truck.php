@@ -1,6 +1,8 @@
 <?php
 
-require_once 'Vehicle.php';
+namespace Class;
+
+
 
 class Truck extends Vehicle
 {

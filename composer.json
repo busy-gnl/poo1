@@ -1,0 +1,15 @@
+{
+    "name": "poo/class",
+    "autoload": {
+        "psr-4": {
+            "Class\\": "Class/"
+        }
+    },
+    "authors": [
+        {
+            "name": "busy-gnl",
+            "email": "vallantjesse@live.com"
+        }
+    ],
+    "require": {}
+}
