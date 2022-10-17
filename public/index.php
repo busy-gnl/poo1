@@ -29,3 +29,6 @@ $wallStreet = new PedestrianWay();
 $paradiseRoad->addVehicles($tesla);
 $paradiseRoad->addVehicles($iveco);
 var_dump($paradiseRoad);
+
+$wallStreet->addVehicles($bike);
+var_dump($wallStreet);
