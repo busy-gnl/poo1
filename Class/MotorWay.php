@@ -13,7 +13,8 @@ final class MotorWay extends HighWay
     public function addVehicles(Vehicle $vehicle): void
     {
         if (!$vehicle instanceof Bicycle || !$vehicle instanceof Skateboard) {
-            $this->currentVehicles[] =  $vehicle;
+            die('Les skates et les vélos ne peuvent pas circuler sur l\'autoroute');
         }
+        $this->currentVehicles[] = $vehicle;
     }
 }

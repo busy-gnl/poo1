@@ -4,8 +4,9 @@ namespace Class;
 
 use Class\Vehicle;
 use Exception;
+use Class\LightableInterface;
 
-class Car extends Vehicle
+class Car extends Vehicle implements LightableInterface
 {
     public const ALLOWED_ENERGIES = [
         'fuel',
@@ -20,6 +21,17 @@ class Car extends Vehicle
     {
         parent::__construct($color, $nbSeats);
         $this->setEnergy($energy);
+    }
+
+
+    public function switchOn(): bool
+    {
+        return true;
+    }
+
+    public function switchOff(): bool
+    {
+        return false;
     }
 
     public function start()
@@ -63,19 +75,12 @@ class Car extends Vehicle
         $this->energyLevel = $energyLevel;
     }
 
-    /**
-     * Get the value of hasParkBrake
-     */
     public function getHasParkBrake()
     {
         return $this->hasParkBrake;
     }
 
-    /**
-     * Set the value of hasParkBrake
-     *
-     * @return  self
-     */
+
     public function setHasParkBrake($hasParkBrake)
     {
         $this->hasParkBrake = $hasParkBrake;

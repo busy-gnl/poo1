@@ -2,8 +2,6 @@
 
 namespace Class;
 
-
-
 class Truck extends Vehicle
 {
     public const ALLOWED_ENERGIES = [
